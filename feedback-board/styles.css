@@ -1,0 +1,93 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.light {
+  background: #f9f9f9;
+  color: #333;
+}
+
+body.dark {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.app {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  display: block;
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border 0.3s;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #0077ff;
+}
+
+button {
+  padding: 0.75rem 1rem;
+  border: none;
+  background: linear-gradient(to right, #0077ff, #00c6ff);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(to right, #005fcc, #00a2cc);
+}
+
+.feedback-card {
+  padding: 1rem;
+  background: #fff;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.feedback-card:hover {
+  transform: translateY(-2px);
+}
+
+.feedback-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.grid-layout {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 2fr;
+}
+
+h1::before {
+  content: "📝 ";
+}
+
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+}
